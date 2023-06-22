@@ -23,9 +23,9 @@ const Footer = ({}) => {
         /> */}
       </div>
       <div className="flex flex-col mt-2 sm:mt-0 items-center justify-center">
-          {/* <p className="sm:text-lg hover:text-white mt-2">
+          <p className="sm:text-lg hover:text-white mt-2">
             ©️TechInvent x Chandigarh University
-          </p> */}
+          </p>
         {/* <p className="m-2">For further information Email us at techinvent2023@cumail.in</p> */}
         <div className="flex flex-wrap items-center gap-x-3 justify-center">
           <a href="#" className="m-1">
