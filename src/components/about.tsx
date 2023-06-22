@@ -17,12 +17,12 @@ const About: FC<aboutProps> = ({}) => {
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-light mb-6">
               Tech Invent CU <span className="text-light-grey">2023</span>{" "}
             </h2>
-            <p className="text-left leading-loose md:leading-loose md:text-xl">
+            <p className=" leading-loose md:leading-loose md:text-xl lg:text-[3vmin] text-justify font-normal my-[0.5vmin] z-20 text-white lg:w-[85%] ">
               Tech Invent is a visionary series of events that aims to foster
               creativity, collaboration, and advancement within the tech
               industry.
               <br />
-              <span className="text-light-grey">
+              <span className="text-light-grey ">
                 Our mission is to inspire and empower individuals to explore and
                 embrace the limitless possibilities that technology offers.
               </span>
@@ -52,7 +52,7 @@ const About: FC<aboutProps> = ({}) => {
               Campus Ambassador{" "}
               <span className="text-light-grey ">Programme</span>
             </h2>
-            <p className="text-left leading-loose md:leading-loose md:text-xl">
+            <p className="leading-loose md:leading-loose md:text-xl lg:text-[3vmin] text-justify font-normal my-[0.5vmin] z-20 text-white lg:w-[85%] ">
               The CA Program is an initiative within Tech Invent, creating a
               powerful network of student ambassadors who proudly represent our
               organization on their respective campuses.
@@ -65,7 +65,7 @@ const About: FC<aboutProps> = ({}) => {
           </div>
         </div>
       </section>
-      <section className="  bg-dark-black text-center py-5 mt-8 md:mt-16 rounded-xl">
+      <section className="  bg-dark-black text-center py-10 mt-8 md:mt-16 rounded-3xl">
         <p className=" gradient-bg text-sm md:text-xl tracking-wider uppercase mb-3">
           Benefits & Incentives
         </p>
@@ -73,7 +73,7 @@ const About: FC<aboutProps> = ({}) => {
           Elevate Your Leadership Journey
         </h2>
 
-        <div className="px-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-3 mt-12">
+        <div className="px-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5 mt-12  pb-10">
           {benefits.map((benefit) => (
             <BenefitsCard
               key={benefit.title}
@@ -104,9 +104,9 @@ const BenefitsCard = ({
   description: string;
 }) => {
   return (
-    <div className="max-w-[250px] md:max-w-none mx-auto bg-light-black text-white p-6 lg:py-10 rounded-lg">
-      <h3 className="text-lg md:text-xl mb-4">{title}</h3>
-      <p className="text-t-gray text-sm md:text-xl">{description}</p>
+    <div className="max-w-[250px] md:max-w-none mx-auto bg-light-black text-center text-white px-5 lg:py-3 pb-5 rounded-2xl">
+      <h3 className="lg:text-[3vmin] text-lg py-1 text-white mt-[5vmin] leading-[35px]">{title}</h3>
+      <p className="text-[#7d828e] text-sm md:text-xl text-justify">{description}</p>
     </div>
   );
 };

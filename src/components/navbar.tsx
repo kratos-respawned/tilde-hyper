@@ -6,7 +6,7 @@ const Navbar = ({ toggleForm }: { toggleForm: () => void }) => {
       <Script src="/menu.js" />
       <header className="bg-dark-black fixed z-50 w-full pt-3  h-[8vmin] flex justify-between items-center px-[8vmin]">
         <div className="logo flex flex-row justify-center items-center space-x-4">
-          <img className=" w-20  " src="./Assets/cu.png" alt="CU-logo" />
+          <img className=" w-20  " src="./Assets/11.png" alt="CU-logo" />
           <img
             className=" w-20  "
             src="./Assets/Tech_1.png"
@@ -14,12 +14,12 @@ const Navbar = ({ toggleForm }: { toggleForm: () => void }) => {
           />
           <img
             className="w-20 hidden lg:block"
-            src="./Assets/naac.png"
+            src="./Assets/10.png"
             alt="naac-logo"
           />
           <img
             className="w-20 hidden xl:block"
-            src="./Assets/qs.png"
+            src="./Assets/9.png"
             alt="qs-logo"
           />
           {/* <!-- <img src="./img/logo.png" alt="logo" className="w-[10vmin] h-[10vmin] mx-[2vmin]" /> */}

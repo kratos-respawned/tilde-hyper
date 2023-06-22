@@ -30,20 +30,20 @@ const Footer = ({}) => {
           <a href="#" className="m-1">
             <i className="p-1 text-sm sm:text-xl fa-solid fa-envelope hover:text-white"></i>
           </a>
-          <a href="#">
+          <a href="tiwarimanas2711@gmail.com">
             <CiMail className=" w-6 h-6  hover:text-white" />
           </a>
-          <a href="#" className="m-1">
+          <a href="6264483021" className="m-1">
             <BsFillTelephoneFill className=" w-5 h-5  hover:text-white" />
           </a>
           <a
-            href="https://instagram.com/techinvent.cu?igshid=Y2IzZGU1MTFhOQ=="
+            href="https://instagram.com/techinvent.cu?igshid=NGExMmI2YTkyZg=="
             className="m-1"
           >
             <AiFillInstagram className=" w-6 h-6  hover:text-white" />
           </a>
 
-          <a href="#" className="m-1">
+          <a href="https://www.linkedin.com/showcase/cu-tech-invent/?originalSubdomain=in" className="m-1">
             <AiFillLinkedin className=" w-6 h-6  hover:text-white" />
           </a>
           <a href="#" className="m-1">

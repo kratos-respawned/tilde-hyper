@@ -67,8 +67,8 @@ const TimelineCard = ({
         {step}
       </span>
       <div className="bg-light-black text-white p-5 rounded-xl mt-4 max-w-[707px]">
-        <h3 className="text-2xl">{heading}</h3>
-        <p className="mt-3 text-lg text-justify font-light max-w-[640px]">
+        <h3 className="text-2xl lg:text-left">{heading}</h3>
+        <p className="mt-3 text-lg text-justify font-light text-[#7d828e] max-w-[640px]">
           {description}
         </p>
       </div>

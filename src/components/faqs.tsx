@@ -30,7 +30,7 @@ const Faq = ({ question, answer }: { question: string; answer: string }) => {
             <div className="border-8 border-transparent bg-transparent border-l-gray-400 ml-2 group-open:rotate-90 transition-transform origin-left"></div>
           </div>
         </summary>
-        <div className="px-1 mt-2 pr-10 pt-0 mx-auto leading-relaxed text-light-grey">
+        <div className="px-1 mt-2 pr-10 pt-0 mx-auto leading-loose text-[#7d828e]">
           <p>{answer}</p>
         </div>
       </details>

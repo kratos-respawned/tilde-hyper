@@ -9,7 +9,7 @@ const RolesResponsibility = () => {
       <h2 className="text-white text-2xl md:text-4xl font-light mb-6">
         Drive Engagement and Inspire Others
       </h2>
-      <section className="max-w-[1200px] mx-auto  grid gap-5 sm:grid-cols-2 justify-center items-center">
+      <section className="max-w-[1200px] mx-auto  grid px-20 sm:grid-cols-2 justify-center items-center gap-9">
         {roles.map((role) => (
           <RoleCard
             key={role.title}
@@ -31,9 +31,9 @@ const RoleCard = ({
   description: string;
 }) => {
   return (
-    <div className="bg-light-black h-full max-w-[300px] sm:max-w-none mx-auto  lg:max-w-none  text-white rounded-xl p-10 px-6 space-y-4">
-      <h3 className="text-lg">{title}</h3>
-      <p className="text-t-gray text-justify ">{description}</p>
+    <div className="bg-light-black h-full max-w-[300px] lg:w-[500px] sm:max-w-none mx-auto  lg:max-w-none  text-white rounded-xl p-10 px-6 space-y-4">
+      <h3 className="lg:text-[3.5vmin]">{title}</h3>
+      <p className="text-[#7d828e] lg:text-[2.5vmin] text-justify ">{description}</p>
     </div>
   );
 };
