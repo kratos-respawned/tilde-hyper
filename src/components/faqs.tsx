@@ -30,7 +30,7 @@ const Faq = ({ question, answer }: { question: string; answer: string }) => {
             <div className="border-8 border-transparent bg-transparent border-l-gray-400 ml-2 group-open:rotate-90 transition-transform origin-left"></div>
           </div>
         </summary>
-        <div className="px-1 mt-2 pr-10 pt-0 mx-auto leading-loose text-[#7d828e]">
+        <div className="px-1 mt-4 text-justify pr-10 pt-0 mx-auto leading-relaxed text-[#7d828e]">
           <p>{answer}</p>
         </div>
       </details>
@@ -88,5 +88,9 @@ const faqs = [
   {
     question: "How can I provide feedback or suggestions for the program?",
     answer: `We value your feedback and suggestions to enhance the Campus Ambassador Program. You can share your thoughts and ideas with us through the designated feedback channels provided during the program.`,
+  },
+  {
+    question: "How can I contact?",
+    answer: `For more information Email us at techinvent2023@cumail.in`,
   },
 ];

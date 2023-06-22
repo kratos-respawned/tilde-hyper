@@ -54,7 +54,7 @@ const TimelineCard = ({
   return (
     <div
       data-aos="fade-up"
-      className={`   relative px-10 lg:px-24   ${
+      className={`   relative px-5 lg:px-24   ${
         !lastStep ? " border-l-2 border-dashed border-white/30 pb-24" : " pb-0 "
       } `}
     >
@@ -66,7 +66,7 @@ const TimelineCard = ({
       <span className="bg-white block text-dark-black uppercase py-3 px-4 rounded-[5px] w-fit relative">
         {step}
       </span>
-      <div className="bg-light-black text-white p-5 rounded-xl mt-4 max-w-[707px]">
+      <div className="bg-light-black text-white p-5 rounded-xl mt-4 sm:max-w-[250px] lg:max-w-[707px]">
         <h3 className="text-2xl lg:text-left">{heading}</h3>
         <p className="mt-3 text-lg text-justify font-light text-[#7d828e] max-w-[640px]">
           {description}

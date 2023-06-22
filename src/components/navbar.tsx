@@ -6,7 +6,7 @@ const Navbar = ({ toggleForm }: { toggleForm: () => void }) => {
       <Script src="/menu.js" />
       <header className="bg-dark-black fixed z-50 w-full pt-3  h-[8vmin] flex justify-between items-center px-[8vmin]">
         <div className="logo flex flex-row justify-center items-center space-x-4">
-          <img className=" w-20  " src="./Assets/11.png" alt="CU-logo" />
+          <a href="http://techinvent.cuchd.in/index.php"><img className=" w-20  " src="./Assets/11.png" alt="CU-logo" /></a>
           <img
             className=" w-20  "
             src="./Assets/Tech_1.png"
@@ -33,13 +33,13 @@ const Navbar = ({ toggleForm }: { toggleForm: () => void }) => {
             href="#about-us"
             className="text-[2vmin] text-light-grey hover:text-white transition-all no-underline mx-[2vmin] cursor-pointer"
           >
-            About us
+            About Us
           </a>
           <a
             href="#roles-and-responsibility"
             className="text-[2vmin] text-light-grey hover:text-white transition-all no-underline mx-[2vmin] cursor-pointer"
           >
-            Roles and responsibilities
+            Roles and Responsibilities
           </a>
           <a
             href="#faq"
