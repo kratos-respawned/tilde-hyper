@@ -68,7 +68,7 @@ const TimelineCard = ({
       </span>
       <div className="bg-light-black text-white p-5 rounded-xl mt-4 sm:max-w-[250px] lg:max-w-[707px]">
         <h3 className="text-2xl lg:text-left">{heading}</h3>
-        <p className="mt-3 text-lg text-justify font-light text-[#7d828e] max-w-[640px]">
+        <p className="mt-3 text-lg text-justify font-light text-[#7d828e] max-w-[640px] leading-6">
           {description}
         </p>
       </div>
