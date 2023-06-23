@@ -3,9 +3,12 @@ import { FC, useEffect, useRef, useState } from "react";
 import NET from "vanta/dist/vanta.net.min";
 
 import * as THREE from "three";
-interface threeLandingProps {}
+interface threeLandingProps { }
+import Script from "next/script";
 
-const ThreeLanding: FC<threeLandingProps> = ({}) => {
+
+
+const ThreeLanding = ({ toggleForm }: { toggleForm: () => void }) =>  {
   const [vantaEffect, setVantaEffect] = useState<any>(0);
   const vantaRef = useRef(null);
   useEffect(() => {
@@ -36,6 +39,7 @@ const ThreeLanding: FC<threeLandingProps> = ({}) => {
   }, [vantaEffect]);
   return (
     <>
+      <Script src="/menu.js" />
       <section
         ref={vantaRef}
         className="black bg-dark-black text-white w-full h-screen grid place-items-center  relative"
@@ -43,7 +47,7 @@ const ThreeLanding: FC<threeLandingProps> = ({}) => {
         <div className="text-center space-y-4">
           <p className="uppercase text-2xl font-semibold">Tech Invent 2023</p>
           <h1 className="text-5xl">Become a Campus Ambassador</h1>
-          <button className="red-shadow bg-white text-dark-black px-5 py-2 rounded-xl ">
+          <button className="red-shadow bg-white text-dark-black px-5 py-2 rounded-xl" onClick={toggleForm} >
             Register Now
           </button>
         </div>

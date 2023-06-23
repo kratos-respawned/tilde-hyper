@@ -54,7 +54,7 @@ function Registeruser(e) {
             collegename: cllg.value,
             yearofstudy: yof.value,
             state: state.value.toLowerCase(),
-            linkedin: linkedin,
+            linkedin: linkedin.value,
             collegeid: collegeid.value,
             token: tokenno,
           }

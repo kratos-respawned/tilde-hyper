@@ -84,7 +84,7 @@ const Form = ({ toggleForm }: { toggleForm: () => void }) => {
               <p className="text-gray-500 py-2">LinkedIN ID*</p>
               <input
                 id="linkedin"
-                name="Phone"
+                name="linkedin"
                 type="text"
                 required
                 className="peer rounded-lg h-10 w-full border-2 border-gray-300 text-gray-900 py-3 px-3 focus:outline-none focus:border-gray-300"
@@ -128,9 +128,9 @@ const Form = ({ toggleForm }: { toggleForm: () => void }) => {
             <div>
               <button
                 type="button"
-                onClick={(e) => {
-                  e.preventDefault();
-                }}
+                // onClick={(e) => {
+                //   e.preventDefault();
+                // }}
                 className="bg-[#393c44] w-full py-3 rounded-full text-white mt-2 no-shadow"
                 id="submit"
               >

@@ -16,7 +16,7 @@ const Home = ({}) => {
   return (
     <div>
       <Navbar toggleForm={toggleForm} />
-      <ThreeLanding />
+      <ThreeLanding toggleForm={toggleForm} />
       <About />
       <RolesResponsibility />
       <Timeline />
