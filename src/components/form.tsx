@@ -1,8 +1,17 @@
 import { useLockBody } from "@/hooks/uselockbody";
 import Script from "next/script";
+import { useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { indianStates } from "./states";
+
 
 const Form = ({ toggleForm }: { toggleForm: () => void }) => {
+  const [selectedState, setSelectedState] = useState('');
+
+  const handleStateChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedState(event.target.value);
+  }
+
   useLockBody();
   return (
     <section className=" grid place-content-center bg-transparent w-full h-full justify-center items-center relative z-20">
@@ -115,14 +124,21 @@ const Form = ({ toggleForm }: { toggleForm: () => void }) => {
               </div>
               <div>
                 <p className="text-gray-500 py-2">State</p>
-                <input
+                <select
                   id="State"
                   name="State"
-                  type="text"
+                  value={selectedState}
+                  onChange={handleStateChange}
                   required
                   className="peer rounded-lg h-10 w-full border-2 border-gray-300 text-gray-900 py-3 px-3 focus:outline-none focus:border-gray-300"
-                  placeholder="Punjab"
-                />
+                >
+                  <option className="text-gray-300 h-10 w-full" value="">Select a state</option>
+                  {indianStates.map((state) => (
+                    <option key={state} value={state}>
+                      {state}
+                    </option>
+                  ))}
+                </select>
               </div>
             </div>
             <div>

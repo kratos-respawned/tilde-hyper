@@ -23,18 +23,18 @@ export default Faqs;
 const Faq = ({ question, answer }: { question: string; answer: string }) => {
   return (
     <>
-      <details className="mb-4 group">
+      <details className="mb-3 group">
         <summary className="list-none flex flex-wrap items-center cursor-pointer group-open:rounded-b-none group-open:z-[1] relative">
           <p className="flex flex-1 p-1 leading-loose text-white">{question}</p>
           <div className="flex w-10 items-center justify-center">
             <div className="border-8 border-transparent bg-transparent border-l-gray-400 ml-2 group-open:rotate-90 transition-transform origin-left"></div>
           </div>
         </summary>
-        <div className="px-1 mt-4 text-justify pr-10 pt-0 mx-auto leading-relaxed text-[#7d828e]">
+        <div className="leading-6 px-1 mt-4 text-justify pr-10 pt-0 mx-auto text-[#7d828e]">
           <p>{answer}</p>
         </div>
       </details>
-      <hr className="my-4 py-2 rounded w-full opacity-30" />
+      <hr className="my-3 py-2 rounded w-full opacity-30" />
     </>
   );
 };
