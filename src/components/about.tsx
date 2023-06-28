@@ -83,13 +83,13 @@ const About: FC<aboutProps> = ({}) => {
           ))}
         </div>
       </section>
-      <Image
+      {/* <Image
         src={"/Assets/group.png"}
         className="absolute bottom-0 left-1/2 -translate-x-1/2 hidden lg:block"
         width={500}
         height={500}
         alt="vector"
-      />
+      /> */}
     </section>
   );
 };
@@ -106,7 +106,7 @@ const BenefitsCard = ({
   return (
     <div className="max-w-[250px] md:max-w-none mx-auto bg-light-black text-center text-white px-5 lg:py-3 pb-5 rounded-2xl">
       <h3 className="lg:text-[3vmin] text-lg py-1 text-white mt-[5vmin] leading-[35px]">{title}</h3>
-      <p className="text-[#7d828e] text-sm md:text-xl text-justify">{description}</p>
+      <p className="text-[#7d828e] text-sm md:text-xl ">{description}</p>
     </div>
   );
 };

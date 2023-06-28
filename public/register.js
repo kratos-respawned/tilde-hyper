@@ -35,18 +35,12 @@ function Registeruser(e) {
   const dbref = ref(db);
   const tokenno = document.getElementById("Phone").value + "CU";
   if (auntenticate()) {
-    get(
-      child(dbref, "UsersList/" + state.value.toLowerCase() + "/" + mob.value)
-    ).then((snapshot) => {
-      if (snapshot.exists()) {
-        alert("Already Exist");
-      } else {
-        set(
-          child(
-            dbref,
-            "UsersList/" + state.value.toLowerCase() + "/" + mob.value
-          ),
-          {
+    get(child(dbref, "UsersList/" + state.value + "/" + mob.value)).then(
+      (snapshot) => {
+        if (snapshot.exists()) {
+          alert("Already Exist");
+        } else {
+          set(child(dbref, "UsersList/" + state.value + "/" + mob.value), {
             name: name.value,
             password: pass.value,
             mobile: mob.value,
@@ -57,17 +51,17 @@ function Registeruser(e) {
             linkedin: linkedin.value,
             collegeid: collegeid.value,
             token: tokenno,
-          }
-        )
-          .then(() => {
-            gotologin();
-            console.log("success");
           })
-          .catch((error) => {
-            alert("error: " + error);
-          });
+            .then(() => {
+              gotologin();
+              console.log("success");
+            })
+            .catch((error) => {
+              alert("error: " + error);
+            });
+        }
       }
-    });
+    );
   } else {
   }
 }
@@ -79,14 +73,34 @@ function auntenticate() {
   let val = mob.value;
   let st = state.value;
 
-  if (val.length == 10 && st != "") {
-    return true;
+  if (
+    val.length == 10 &&
+    st != "" &&
+    linkedin.value.length != "" &&
+    pass.value.length != ""
+  ) {
+    var mailFormat = /\S+@\S+\.\S+/;
+    if (email.value.match(mailFormat) && email.value != "") {
+      return true;
+    } else {
+      alert("Invalid email address!");
+    }
   } else {
-    alert("Kindly enter correct mobile number or state");
+    alert("Kindly check and fill all the details properly");
+    mob.style.border = "1px solid red";
+    state.style.border = "1px solid red";
+    linkedin.style.border = "1px solid red";
+    collegeid.style.border = "1px solid red";
+    pass.style.border = "1px solid red";
+    cllg.style.border = "1px solid red";
+    yof.style.border = "1px solid red";
+    name.style.border = "1px solid red";
+    email.style.border = "1px solid red";
   }
 }
 
 function gotologin() {
   alert("Registered Succesfully");
+  location.reload();
   // window.location = "login.html";
 }
