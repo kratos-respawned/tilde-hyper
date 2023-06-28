@@ -25,7 +25,7 @@ const Form = ({ toggleForm }: { toggleForm: () => void }) => {
           <p className=" font-bold tracking-[0.7vmin] z-20 text-white mt-3 text-lg">
             TECH INVENT
           </p>
-          <h1 className="sm:text-3xl text-2xl text-white py-3">
+          <h1 className="sm:text-3xl text-2xl text-white py-3 px-4">
             Register as an Ambassador
           </h1>
         </div>
