@@ -33,7 +33,7 @@ const RoleCard = ({
   return (
     <div className="bg-light-black h-full w-[300px] lg:w-[500px] sm:max-w-none mx-auto  lg:max-w-none  text-white rounded-xl p-10 px-6 space-y-4">
       <h3 className="lg:text-[3.5vmin]">{title}</h3>
-      <p className="text-[#7d828e] lg:text-[2.5vmin] text-justify ">{description}</p>
+      <p className="text-[#7d828e] lg:text-[2.5vmin] text-justify leading-6">{description}</p>
     </div>
   );
 };

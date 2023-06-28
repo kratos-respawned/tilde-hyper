@@ -1,8 +1,17 @@
 import { useLockBody } from "@/hooks/uselockbody";
 import Script from "next/script";
+import { useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { indianStates } from "./states";
+
 
 const Form = ({ toggleForm }: { toggleForm: () => void }) => {
+  const [selectedState, setSelectedState] = useState('');
+
+  const handleStateChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setSelectedState(event.target.value);
+  }
+
   useLockBody();
   return (
     <section className=" grid place-content-center bg-transparent w-full h-full justify-center items-center relative z-20">
@@ -115,39 +124,21 @@ const Form = ({ toggleForm }: { toggleForm: () => void }) => {
                 />
               </div>
               <div>
-
-                <p className="text-gray-500 py-2">State*</p>
-                <select id="State" className="peer rounded-lg h-10 w-full border-2 border-gray-300 text-gray-900  px-3 focus:outline-none focus:border-gray-300" >
-                    <option value="Andhra_Pradesh">Andhra Pradesh</option>
-                    <option value="Arunachal_Pradesh">Arunachal Pradesh</option>
-                    <option value="Assam">Assam</option>
-                    <option value="Bihar">Bihar</option>
-                    <option value="Chhattisgarh">Chhattisgarh</option>
-                    <option value="Goa">Goa</option>
-                    <option value="Gujarat">Gujarat</option>
-                    <option value="Haryana">Haryana</option>
-                    <option value="Himachal_Pradesh">Himachal Pradesh</option>
-                    <option value="Jammu_Kashmir">Jammu and Kashmir</option>
-                    <option value="Jharkhand">Jharkhand</option>
-                    <option value="Karnataka">Karnataka</option>
-                    <option value="Kerala">Kerala</option>
-                    <option value="Madhya_Pradesh">Madhya Pradesh</option>
-                    <option value="Maharashtra">Maharashtra</option>
-                    <option value="Manipur">Manipur</option>
-                    <option value="Mizoram">Mizoram</option>
-                    <option value="Nagaland">Nagaland</option>
-                    <option value="Odisha">Odisha</option>
-                    <option value="Punjab">Punjab</option>
-                    <option value="Rajasthan">Rajasthan</option>
-                    <option value="Sikkim">Sikkim</option>
-                    <option value="Tamil_Nadu">Tamil Nadu</option>
-                    <option value="Telangana">Telangana</option>
-                    <option value="Tripura">Tripura</option>
-                    <option value="Uttar_Pradesh">Uttar Pradesh</option>
-                    <option value="Uttarakhand">Uttarakhand</option>
-                    <option value="West_Bengal">West Bengal</option>
-
-
+                <p className="text-gray-500 py-2">State</p>
+                <select
+                  id="State"
+                  name="State"
+                  value={selectedState}
+                  onChange={handleStateChange}
+                  required
+                  className="peer rounded-lg h-10 w-full border-2 border-gray-300 text-gray-900 py-3 px-3 focus:outline-none focus:border-gray-300"
+                >
+                  <option className="text-gray-300 h-10 w-full" value="">Select a state</option>
+                  {indianStates.map((state) => (
+                    <option key={state} value={state}>
+                      {state}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
